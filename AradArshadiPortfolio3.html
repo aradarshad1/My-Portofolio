@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arad Arshadi | Portfolio</title>
+  <style>
+    :root {
+      --primary: #4a90e2;
+      --bg: #f5f7fa;
+      --text: #333;
+      --card-bg: #fff;
+      --shadow: rgba(0,0,0,0.1) 0px 2px 8px;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-family);
+      background: var(--bg);
+      color: var(--text);
+      padding: 1.5rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    main {
+      max-width: 720px;
+      width: 100%;
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    h1, h2 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-info {
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    #toggleSkillsBtn {
+      background: var(--primary);
+      border: none;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-bottom: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    #toggleSkillsBtn:hover {
+      background: #3a78c2;
+    }
+
+    #skillsContainer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill {
+      background: var(--card-bg);
+      padding: 1rem;
+      border-radius: 0.75rem;
+      box-shadow: var(--shadow);
+      font-weight: 600;
+      position: relative;
+    }
+
+    .skill-bar {
+      background: #e0e7ff;
+      height: 10px;
+      border-radius: 5px;
+      margin: 0.5rem 0;
+      overflow: hidden;
+    }
+
+    .skill-level {
+      background: var(--primary);
+      height: 100%;
+      border-radius: 5px 0 0 5px;
+      transition: width 0.7s ease;
+    }
+
+    .skill small {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: var(--primary);
+    }
+
+    .project {
+      background: var(--card-bg);
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .lang-box {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+      background: #eef2f7;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 400px) {
+      .skill small {
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+    <h1>Arad Arshadi</h1>
+    <p>Data Analyst | AI & Predictive Insights</p>
+    <p><a href="mailto:araad.arrshadi@gmail.com">araad.arrshadi@gmail.com</a> | <a href="https://linkedin.com/in/arad-arshadi-456308202">LinkedIn</a></p>
+  </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I'm a curious and driven data analyst passionate about leveraging data for real-world impact. With a background in AI and hands-on experience with predictive modeling, I love transforming raw numbers into meaningful insights. Whether it’s optimizing delivery times or understanding user behavior, I enjoy solving problems that matter.
+      </p>
+    </section>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p>
+        Motivated and detail-oriented Data Analyst passionate about using data to optimize business processes, drive customer satisfaction, and unlock operational efficiency. With a strong grasp of data storytelling and predictive modeling, I thrive in team environments where ideas are transformed into impact.
+      </p>
+    </section>
+
+    <section>
+      <h2>Project Highlights</h2>
+      <div class="project">
+        <h3>Mealzo: Food Delivery ETA Prediction Model</h3>
+        <p>
+          Developed an AI model predicting Estimated Time of Arrival (ETA) for orders using order volume, time of day, courier experience, and weather conditions. Delivered deep-dive analytics on dish trends, delivery times, engagement metrics, and region-based performance — enabling operational improvements and better customer experience.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education & Certifications</h2>
+      <p>
+        • B.S. of Software Engneering from Islamic Azad University of Tabriz (Graduated 2023)<br/>
+        • AI & Data Analytics Course – Dibagaran Institute<br/>
+        • Professional English proficiency (used daily in UK-based role)
+      </p>
+    </section>
+
+    <section>
+      <h2>Languages</h2>
+      <div class="lang-box">
+        <div class="lang-item">
+          <span>Turkish</span>
+          <span>Native</span>
+        </div>
+        <div class="lang-item">
+          <span>Persian</span>
+          <span>Fluent (National Language)</span>
+        </div>
+        <div class="lang-item">
+          <span>English</span>
+          <span>Professional</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <button id="toggleSkillsBtn">Show Skills ▼</button>
+      <div id="skillsContainer">
+        <div class="skills">
+          <div class="skill">
+            Python
+            <div class="skill-bar"><div class="skill-level" style="width: 50%;"></div></div>
+            <small>50%</small>
+          </div>
+          <div class="skill">
+            Data Storytelling
+            <div class="skill-bar"><div class="skill-level" style="width: 50%;"></div></div>
+            <small>50%</small>
+          </div>
+          <div class="skill">
+            Predictive Modeling
+            <div class="skill-bar"><div class="skill-level" style="width: 60%;"></div></div>
+            <small>60%</small>
+          </div>
+          <div class="skill">
+            Team Collaboration
+            <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
+            <small>70%</small>
+          </div>
+          <div class="skill">
+            SQL
+            <div class="skill-bar"><div class="skill-level" style="width: 0%;"></div></div>
+            <small>0%</small>
+          </div>
+          <div class="skill">
+            Power BI / Tableau
+            <div class="skill-bar"><div class="skill-level" style="width: 0%;"></div></div>
+            <small>0%</small>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const btn = document.getElementById('toggleSkillsBtn');
+    const skills = document.getElementById('skillsContainer');
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.textContent.includes('Hide');
+      skills.style.maxHeight = expanded ? '0' : skills.scrollHeight + 'px';
+      btn.textContent = expanded ? 'Show Skills ▼' : 'Hide Skills ▲';
+    });
+  </script>
+</body>
+</html>
